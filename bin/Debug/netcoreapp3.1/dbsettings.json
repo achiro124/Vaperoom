@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    
+      "DefaultConnection": "Server=DESKTOP-IFVH175;Database=Vaperoom1;Trusted_Connection=True; MultipleActiveResultSets=true"
+  }
+}
