@@ -9,5 +9,6 @@ namespace Vaperoom.Manager.Products
     public interface IProductManager 
     {
         Task<ICollection<Product>> GetAllProductsAsync();
+        Task<Product> GetProductById(int ProductId);
     }
 }

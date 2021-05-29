@@ -21,5 +21,8 @@ namespace Vaperoom.Manager.Products
                                  .Include(st=>st.Category)
                                  .ToListAsync();
         }
+
+        public async Task<Product> GetProductById(int ProductId) => await _context.Products.Include(st => st.Category).FirstOrDefaultAsync(st => st.ProductID == ProductId);
+        
     }
 } 
