@@ -40,8 +40,6 @@ namespace Vaperoom.Models
                         "Защита: от низкого заряда батареи, от короткого замыкания, от перегрева, тайм-аут 10 сек\n" +
                         "Размер: 88x40x18 мм",
                         Equipment = "GeekVape Aegis Pod\n" +
-                        "Картридж на 3.5 мn\n" +
-                        "Кабель USB Type-C\n" +
                         "Документация",
                         Imgs = new List<Product_Img>()
                         {
