@@ -156,6 +156,214 @@ namespace Vaperoom.Models
                     },
                     new Product
                     {
+                        Category = Category["POD-системы и комплектующие"],
+                        ProductType = TypeProduct.SMOK,
+                        Img = "https://imageup.ru/img110/3748532/nord2-previu.jpg",
+                        Name = "SMOK Nord 2 pod kit",
+                        Value = 1990,
+                        Description = "Компания SMOK выпустила вторую версию популярной POD-системы - SMOK Nord 2 Pod Kit. Устройство" +
+                       "получило большое количество плюшек: поддержка огромного количества картриджей и RBA, Бак с" +
+                       "емкостью 4.5 мл, встроенный аккумулятор на 1500mAh, дисплей и регулировка мощности в пределах" +
+                       "40 Вт. Кроме того, SMOK Nord 2 Pod Kit 40W немного увеличился в размерах, относительно " +
+                       "предшественника, его габариты составляют 95х30х20 и вес 80г.",
+
+                        Characteristics = "Аккумулятор: 1500 mAh\n" +
+                       "Выходная мощность: 1 - 40 Вт\n" +
+                       "Диапазон сопротивления: 0.3 - 3.0 Ωn" +
+                       "Объем картриджа: 4.5 мл\n" +
+                       "Дисплей: 0.69' OLED\n" +
+                       "Защита от перегрева\n" +
+                       "Размер: 95x30x20 мм\n" +
+                       "Вес: 80 гр\n",
+                        Equipment = "SMOK Nord 2 pod kit\n" +
+                       "Картридж на 4.5 мл\n" +
+                       "Испаритель 0.4 Ω RPM Mesh\n" +
+                       "Испаритель 0.8 Ω Nord DC MTL\n" +
+                       "Кабель Micro-USB",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img110/3748532/nord2-previu.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img216/3748533/nord2-2.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img286/3748534/nord-2-3.jpg"
+                            }
+                        }
+                    },
+                    new Product
+                    {
+                        Category = Category["POD-системы и комплектующие"],
+                        ProductType = TypeProduct.SMOK,
+                        Img = "https://imageup.ru/img239/3748540/rpm1.jpg",
+                        Name = "SMOK RPM 2 Pod Kit (СМОК РПМ 2)",
+                        Value = 2590,
+                        Description = "Известный и любимый многими производитель SMOK продолжает бомбить новинками! Новая" +
+                       "подсистема SMOK RPM 2 Pod Kit 80W. Устройство крайне интересное, обладающее емким" +
+                       "аккумулятором, солидным запасом мощности и потрясающей вариативностью в плане испарителей." +
+                       "SMOK RPM 2 Kit внешне напоминает устройство Nord 2 от того же производителя — СМОК. Но RPM 2" +
+                       "достаточно сильно превосходит его по габаритам - 28х31х108,5 мм и при этом весит 132 грамма." +
+                       "Материалы корпуса стандартные — металл и пластик." +
+                       "SMOK RPM 2 способен выдавать мощность до 80 ватт, плата поддерживает только режим вариватта и" +
+                       "способна поднимать намотки с сопротивлением от 0,15 до 3,0 Ом. Затяжка осуществляется путем" +
+                       "нажатия на кнопку Fire.",
+
+                        Characteristics = "Аккумулятор: 2000 mAh\n" +
+                       "Выходная мощность: 1 - 80 Вт\n" +
+                       "Диапазон сопротивления: 0.15 - 3.0 Ωn" +
+                       "Объем картриджа: 7 мл\n" +
+                       "Дисплей: 1.14' OLED\n" +
+                       "Защита от низкого/высокого сопротивления, от перегрева, от кз.\n" +
+                       "Размер: 108,5x31x28 мм\n" +
+                       "Вес: 132 гр\n",
+                        Equipment = "SMOK RPM 2 pod kit\n" +
+                       "Картридж 0.4 Ω RPM Mesh\n" +
+                       "Картридж 0.16 Ω RPM 2 Mesh\n" +
+                       "Кабель USB-C",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img239/3748540/rpm1.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img114/3748541/rpm2.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img23/3748542/rpm3.jpg"
+                            }
+                        }
+                    },
+                     new Product
+                     {
+                         Category = Category["Мехмоды"],
+                         ProductType = TypeProduct.Мехмоды,
+                         Img = "https://imageup.ru/img227/3748549/2170mekh1.jpg",
+                         Name = "Мехмод Rockvape - Rebel 21700 Purple Cyber Set",
+                         Value = 22900,
+                         Description = "Хороший Дорогой Мех",
+                     
+
+                         Characteristics = "Производитель: Rockvape Mods Co\n" +
+                       "Материал - латунь\n" +
+                       "Постоянный контакт\n" +
+                       "Кнопка с пружиной\n" +
+                       "Краска - церакот\n" +
+                       "Аккумуляторы - 1 x 21700 (18650 с переходником).\n" +
+                       "Характеристики дрипки:\n" +
+                       "Материал - латунь\n" +
+                       "Версия 1.6\n" +
+                       "Посеребряная база\n" +
+                       "Титановые болты с анодированием\n",
+                         Equipment = "Мехмод Rockvape - Rebel 21700 Purple Cyber Set\n" +
+                       "Мехмод\n" +
+                       "Коробка\n" +
+                       "Упаковка",
+                         Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img227/3748549/2170mekh1.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img136/3748550/2170mekh2.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img48/3748551/2170mekh3.jpg"
+                            },
+                             new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img94/3748552/2170mekh4.jpg"
+                            }
+                        }
+                     },
+                     new Product
+                     {
+                         Category = Category["Мехмоды"],
+                         ProductType = TypeProduct.Мехмоды,
+                         Img = "https://imageup.ru/img110/3748563/21m1.jpg",
+                         Name = "Мехмод Rockvape - Swordfish 21700 Black Cerakote Set",
+                         Value = 19400,
+                         Description = "Очередное творение от Rockvape - Swordfish 21700!" +
+                         "Дерзкий, яркий и необычный дизайн, а также удобная боковая кнопка с блокировкой нажатия. Это все," +
+                         "что нужно знать о данном девайсе.",
+
+                         Characteristics = "Производитель: Rockvape Mods Co. (Россия))\n" +
+                       "Материал - латунь\n" +
+                       "Постоянный контакт\n" +
+                       "Боковая кнопка с блокировкой нажатия\n" +
+                       "Краска - церакот\n" +
+                       "Аккумуляторы - 1 x 21700 (18650 с переходником).\n" +
+                       "Посадка под атомы - 24-25 мм.\n",
+                         Equipment = "Мехмод Rockvape - Swordfish 21700 Black Cerakote Set\n" +
+                       "Мехмод Rockvape - Swordfish 21700 Black Cerakote\n" +
+                       "Дрипка BRO RDA 1.6 с куполом от Rockvape в цвет мехмода\n" +
+                       "Койлы от производителя",
+                         Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img110/3748563/21m1.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img155/3748564/21m2.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img220/3748565/21m3.jpg"
+                            },
+                        }
+                     },
+                     new Product
+                     {
+                         Category = Category["Мехмоды"],
+                         ProductType = TypeProduct.Мехмоды,
+                         Img = "https://imageup.ru/img219/3748556/mekhg1.jpg",
+                         Name = "Мехмод GodMod - Imperium Gloss Black - Gold",
+                         Value = 6500,
+                         Description = "Новая версия отличного девайса от ребят из God Mod. К особенностям можно отнести стойкое" +
+                         "покрытие, боковую кнопку и удобство держания в руке.",
+
+
+                         Characteristics = "Производитель - GodMod (Россия)\n" +
+                       "Материал - латунь ЛС59-1\n" +
+                       "Высота мода в заряженном состоянии - 84 мм\n" +
+                       "Максимальный диаметр - 31,5 мм, минимальный - 24,5 мм\n" +
+                       "Посадка под 25 мм\n" +
+                       "Кнопка - боковая\n" +
+                       "Формат акб 21700, 20700 и 18650 (через проставку).\n",
+                         Equipment = "Мехмод GodMod - Imperium Gloss Black - Gold\n" +
+                       "Мехмод\n" +
+                       "Коробка\n" +
+                       "Упаковка",
+                         Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img219/3748556/mekhg1.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img250/3748557/mekhg2.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img65/3748558/mekhg3.jpg"
+                            },
+                        }
+                     },
+                    new Product
+                    {
                         Category = Category["Жидкости для POD и MTL"],
                         ProductType = TypeProduct.Солевые_жидкости,
                         Img = "https://imageup.ru/img221/3746858/3.jpg",
