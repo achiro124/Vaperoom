@@ -68,6 +68,7 @@ namespace Vaperoom.Migrations
                     Img = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Value = table.Column<int>(type: "int", nullable: false),
                     Score = table.Column<double>(type: "float", nullable: false),
+                    NumberScore = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Characteristics = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Equipment = table.Column<string>(type: "nvarchar(max)", nullable: true),

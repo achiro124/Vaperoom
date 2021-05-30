@@ -19,9 +19,8 @@ namespace Vaperoom.Storage.Entity
         public string Img { get; set; }
         [Required]
         public int Value { get; set; }
-        [Required]
-        [Range(1.0, 5.0)]
-        public double? Score { get; set; }
+        public double Score { get; set; }
+        public int NumberScore { get; set; }
         [Required]
         public string Description { get; set; }
         public string Characteristics { get; set; }
@@ -29,6 +28,8 @@ namespace Vaperoom.Storage.Entity
         public List<Review> Reviews { get; set; } = new List<Review>();
         public Category Category { get; set; }
         public TypeProduct ProductType { get; set; }
+
+        public List<Product_Img> Imgs { get; set; }
 
     }
     public enum TypeProduct

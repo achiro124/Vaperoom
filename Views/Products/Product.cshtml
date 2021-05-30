@@ -1,0 +1,74 @@
+﻿@model Vaperoom.Storage.Entity.Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вейп Шоп | Vape shop</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+    <body>
+            <div class="newproducts newproducts-product">
+                <div class="product-title">@Model.Name</div>
+                <div class="product-image">
+                    <img src=@Model.Img alt="" class="image-prod">
+                </div>
+                <div class="rating rating-2 rating_set">
+
+                    <div class="rating_body">
+                        <div class="rating_active"></div>
+                        <div class="rating_items">
+                            <input type="radio" class="rating_item" value="1" name="rating">
+                            <input type="radio" class="rating_item" value="2" name="rating">
+                            <input type="radio" class="rating_item" value="3" name="rating">
+                            <input type="radio" class="rating_item" value="4" name="rating">
+                            <input type="radio" class="rating_item" value="5" name="rating">
+                        </div>
+                    </div>
+                    <div class="rating_value rating_value-hidden">3.6</div>
+                    <div style="font-size: 14px; width: 100px; margin-left: 10px; margin-bottom: 4px;">2417 отзывов</div>
+                </div>
+
+
+                <p class="pricelist">@Model.Value ₽</p>
+                <br>
+                <p>Доступность: <strong style="padding-left: 30px;" class="before-block">в наличие</strong></p>
+
+                <div class="warning">
+                    <p>ВНИМАНИЕ: КУРЕНИЕ И УПОТРЕБЛЕНИЕ НИКОТИНОСОДЕРЖАЩЕЙ ПРОДУКЦИИ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ, МОЖЕТ ВЫЗЫВАТЬ ЗАВИСИМОСТЬ.</p>
+                </div>
+                <div class="warning description-product">
+                    <p>@Model.Description</p>
+                    <p>@Model.Characteristics</p>
+                </div>
+                <form action="#">
+                    <div class="count-product">
+                        <div class="left-column-count" id="minus">-</div>
+                        <div class="center-column-count">0</div>
+                        <div class="right-column-count" id="plus">+</div>
+                    </div>
+                    <input type="hidden" id="hidden" name="hidden">
+
+                    <script>
+                        var count = 0;
+
+                        document.querySelector('.left-column-count').onclick = function () {
+                            count--;
+                            if (count <= 0) {
+                                count = 0;
+                            }
+                            document.querySelector('.center-column-count').innerHTML = count;
+                            document.getElementById('hidden').value = count;
+                        };
+                        document.querySelector('.right-column-count').onclick = function () {
+                            count++;
+                            document.querySelector('.center-column-count').innerHTML = count;
+                            document.getElementById('hidden').value = count;
+                        };
+                    </script>
+
+                    <input type="submit" value="В КОРЗИНУ" class="submit-btn">
+                </form>
+            </div>
+    </body>
+</html>

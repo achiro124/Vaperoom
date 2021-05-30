@@ -10,5 +10,6 @@ namespace Vaperoom.Manager.Products
     {
         Task<ICollection<Product>> GetAllProductsAsync();
         Task<Product> GetProductById(int ProductId);
+        Task<List<Product>> GetByCategory(string Category);
     }
 }

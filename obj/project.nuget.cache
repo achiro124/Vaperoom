@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZybeVwsRqQSG/k5wTEtzsEpDB3Tw/XlCwAXfjG49lonitdun2uhUsAiIsWWBZZ3KGTAGaBsRi1vhb1qhRgD97g==",
+  "dgSpecHash": "gC6VLlhKVoqCwchwQOQcjJ5zlUaur9+TRXH4b4t7D5OjFdDhm5K9IReM5yKU9fHjJE97nkjcA2Mff+nPUEphiQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\navfa\\source\\repos\\Vaperoom\\Vaperoom.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\navfa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\navfa\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\5.0.6\\microsoft.aspnetcore.identity.ui.5.0.6.nupkg.sha512",
     "C:\\Users\\navfa\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\navfa\\.nuget\\packages\\microsoft.codeanalysis.common\\3.9.0\\microsoft.codeanalysis.common.3.9.0.nupkg.sha512",
     "C:\\Users\\navfa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

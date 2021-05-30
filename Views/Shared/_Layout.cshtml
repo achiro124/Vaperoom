@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вейп Шоп | Vape shop</title>
     @*<link rel="stylesheet" href="style.css">*@
-    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="wrapper">
             <div class="logo">
                 <a href="index.html" class="ref-block">
-                    <img src="img/VapeShopLogo.png" alt="" class="logo-image">
+                    <img src="~/img/VapeShopLogo.png" alt="" class="logo-image">
                 </a>
             </div>
             <div class="list">
@@ -25,6 +25,9 @@
                             <div class="right-column">
                                 <li>
                                     <a class="ref-block name-category" href="#">НОВИНКИ</a>
+                                </li>
+                                <li>
+                                    <a class="ref-block name-category" href=@Url.Action("Register","Account")>Регистрация</a>
                                 </li>
                                 <li>
                                     <a class="ref-block sub-category" href="#">Атомайзеры</a>
@@ -176,7 +179,15 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+
+    <div class="container" style="margin-top:150px;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="clearfix"></div>
+    <footer class="footer">
         <div class="wrapper">
             <div class="footer_top">
                 <div class="conteiner_div">
@@ -198,7 +209,7 @@
 
                 <div class="logo-footer">
                     <div class="image-footer">
-                        <img src="img/VapeShopLogo.png" alt="">
+                        <img src="~/img/VapeShopLogo.png" alt="">
                     </div>
                 </div>
 
@@ -244,8 +255,14 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </footer>
     <div class="clearfix"></div>
+
+    <script src="~/Js/script2.js"></script>
+    <script src="~/Js/script_slider3.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>﻿

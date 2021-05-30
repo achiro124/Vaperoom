@@ -10,7 +10,7 @@ using Vaperoom.Storage;
 namespace Vaperoom.Migrations
 {
     [DbContext(typeof(MvcVapeShopContext))]
-    [Migration("20210527124947_m1")]
+    [Migration("20210529180125_m1")]
     partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,11 +122,13 @@ namespace Vaperoom.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("NumberScore")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductType")
                         .HasColumnType("int");
 
-                    b.Property<double?>("Score")
-                        .IsRequired()
+                    b.Property<double>("Score")
                         .HasColumnType("float");
 
                     b.Property<int>("Value")
@@ -239,7 +241,7 @@ namespace Vaperoom.Migrations
             modelBuilder.Entity("Vaperoom.Storage.Entity.Product_Img", b =>
                 {
                     b.HasOne("Vaperoom.Storage.Entity.Product", "Product")
-                        .WithMany()
+                        .WithMany("Imgs")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -259,6 +261,8 @@ namespace Vaperoom.Migrations
 
             modelBuilder.Entity("Vaperoom.Storage.Entity.Product", b =>
                 {
+                    b.Navigation("Imgs");
+
                     b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
