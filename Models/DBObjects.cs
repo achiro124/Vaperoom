@@ -241,6 +241,144 @@ namespace Vaperoom.Models
                             }
                         }
                     },
+                    new Product
+                    {
+                        Category = Category["Аккамуляторы"],
+                        ProductType = TypeProduct.Аккамуляторы,
+                        Img = "https://imageup.ru/img106/3748689/vtc6.jpg",
+                        Name = "Sony / Murata VTC6 - 3000mAh, 30A, 3.6V",
+                        Value = 550,
+                        Description = "Высокотоковые аккумуляторы Sony / Murata VTC6 наиболее часто используется в вариватах и" +
+                       "варивольтах, но также может быть использован в механическом моде.",
+                       
+
+                        Characteristics = "Типоразмер: 18650\n" +
+                       "Модель: US18650VTC6\n" +
+                       "Емкость: 3000мАч" +
+                       "Напряжение номинальное: 3.6В\n" +
+                       "Максимальный ток разряда: 30А\n" +
+                       "Максимальный ток заряда: 6А\n",
+
+                        Equipment = "Sony / Murata VTC6\n" +
+                       "Сам аккамулятор\n",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img106/3748689/vtc6.jpg"
+                            }
+                        }
+                    },
+                    new Product
+                    {
+                        Category = Category["Аккамуляторы"],
+                        ProductType = TypeProduct.Аккамуляторы,
+                        Img = "https://imageup.ru/img149/3748690/5a1.jpg",
+                        Name = "Sony / Murata VTC5A",
+                        Value = 450,
+                        Description = "Данный вид аккумуляторов приобрел большую популярность среди владельцев механических модов" +
+                       "из-за высокой токоотдачи и надежности, но также может использоваться и боксмодах.",
+
+
+                        Characteristics = "Типоразмер: 18650\n" +
+                       "Модель: US18650VTC5A\n" +
+                       "Емкость: 2600мАч" +
+                       "Напряжение номинальное: 3.6В\n" +
+                       "Максимальный ток разряда: 35А\n" +
+                       "Максимальный ток заряда: 6А\n",
+
+                        Equipment = "Sony / Murata VTC5A\n" +
+                       "Сам аккамулятор\n",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img149/3748690/5a1.jpg"
+                            }
+                        }
+                    },
+                    new Product
+                    {
+                        Category = Category["Аккамуляторы"],
+                        ProductType = TypeProduct.Аккамуляторы,
+                        Img = "https://imageup.ru/img289/3748691/40t1.jpg",
+                        Name = "Samsung 40T - 4000mAh, 30A, 3.7V",
+                        Value = 790,
+                        Description = "Данный вид аккумуляторов подходит для всех видов устройств.",
+
+
+                        Characteristics = "Типоразмер: 21700\n" +
+                       "Тип: Li-ion, незащищенный, плюсовой контакт плоский\n" +
+                       "Емкость: 4000мАч" +
+                       "Напряжение номинальное: 3.7В\n" +
+                       "Максимальный ток разряда: 30А\n",
+
+                        Equipment = "Samsung 40T - 4000mAh, 30A, 3.7V\n" +
+                       "Сам аккамулятор\n",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img289/3748691/40t1.jpg"
+                            }
+                        }
+                    },
+                    new Product
+                    {
+                        Category = Category["Готовые койлы"],
+                        ProductType = TypeProduct.Готовые_койлы,
+                        Img = "https://imageup.ru/img156/3748692/k1.jpg",
+                        Name = "Framed Alien - 0.07 Ω (ручная намотка)",
+                        Value = 400,
+                        Description = "Framed Alien - когда все самое лучшее из двух видов намоток собрано в одной. От Framed Staple -" +
+                        "отличная впитываемость и быстрый старт, от Alien - волнистая оплетка, которая отлично раскрывает\n" +
+                        "вкус твоих любимых жидкостей. Попробуй и ты будешь в восторге! Framed Alien 0.07 Ω подойдет для\n" +
+                        "мехмода и платы от 0.05 Ω. Поставляется в упаковке от Framed Staple.\n",
+
+                        Characteristics = "Сопротивление 0.07 Ω\n" +
+                       "Цвет: Градиент\n",
+
+                        Equipment = "Framed Alien - 0.07 Ω (ручная намотка)\n" +
+                       "Койлы\n"+
+                        "Вата\n",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img156/3748692/k1.jpg"
+                            }
+                        }
+                    },
+                    new Product
+                    {
+                        Category = Category["POD-системы и комплектующие"],
+                        ProductType = TypeProduct.Logic_Compact,
+                        Img = "https://imageup.ru/img231/3748685/l1.jpg",
+                        Name = "Logic Compact Kit",
+                        Value = 2590,
+                        Description = "Хорошее устройство для парения солевого никотина"+
+                        "Идеально подходит для тех, кто хочет быстро накуриться",
+                        Characteristics = "Аккумулятор: 500 mAh\n" +
+                       "Выходная мощность: 5-7 Вт\n" +
+                       "Объем картриджа: 2.5 мл\n" +
+                       "Размер: 108,5x31x28 мм\n" +
+                       "Вес: 50 гр\n",
+                        Equipment = "Logic Compact Kit\n" +
+                       "Картридж малина\n" +
+                       "Картридж тропический микс\n" +
+                       "Кабель зарядки",
+                        Imgs = new List<Product_Img>()
+                        {
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img231/3748685/l1.jpg"
+                            },
+                            new Product_Img
+                            {
+                                ImagesUrl = "https://imageup.ru/img212/3748687/l2.jpg"
+                            }
+                        }
+                    },
                      new Product
                      {
                          Category = Category["Мехмоды"],
