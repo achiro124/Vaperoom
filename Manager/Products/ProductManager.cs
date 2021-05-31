@@ -50,5 +50,44 @@ namespace Vaperoom.Manager.Products
             }
             return products;
         }
+
+        public string GetNameTypeProduct(int Type)
+        {
+            
+            if(Type == 0)
+            {
+                return "GeekVape";
+            }
+            if (Type == 1)
+            {
+                return "SMOK";
+            }
+            if (Type == 2)
+            {
+                return "Logic_Compact";
+            }
+            if (Type == 3)
+            {
+                return "Солевые_жидкости";
+            }
+            if (Type == 4)
+            {
+                return "Щелочные_жидкости";
+            }
+            if (Type == 5)
+            {
+                return "Мехмоды";
+            }
+            if (Type == 6)
+            {
+                return "Аккамуляторы";
+            }
+            if (Type == 7)
+            {
+                return "Готовые_койлы";
+            }
+            return "1";
+        }
+        
     }
 } 

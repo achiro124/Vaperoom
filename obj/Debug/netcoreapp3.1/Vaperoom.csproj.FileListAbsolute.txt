@@ -199,3 +199,4 @@ C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.RazorTa
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.Views.pdb
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.csproj.CopyComplete
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.genruntimeconfig.cache
+C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Products\Category.cshtml.g.cs

@@ -36,18 +36,18 @@
                                     <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие",Type = 2})>Logic_Compact</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие", Type = -1})>ТОП-ЦЕНЫ</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие", Type = "sort"})>ТОП-ЦЕНЫ</a>
                                 </li>
                             </div>
                             <div class="right-column">
                                 <li>
-                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "Жидкости"})>Жидкости</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "Жидкости для POD и MTL"})>Жидкости</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости", Type = 3})>Солевые_жидкости</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости для POD и MTL", Type = 3})>Солевые_жидкости</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости", Type = 4})>Щелочные_жидкости</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости для POD и MTL", Type = 4})>Щелочные_жидкости</a>
                                 </li>
                             </div>
                             <div class="right-column">
@@ -102,11 +102,6 @@
                 <ul>
                     <li><a href=@Url.Action("Index","Home")>Главная</a></li>
                     <li><a href=@Url.Action("Register","Account")>Личный кабинет</a></li>
-
-                    <li><a href="search_hotels.html">Отели</a></li>
-                    <li><a href="cars.html">аренда авто</a></li>
-                    <li><a href="support.html">Служба поддержки</a></li>
-                    <li><a href="forCompany.html">Для компаний*</a></li>
                 </ul>
             </div>
         </div>
