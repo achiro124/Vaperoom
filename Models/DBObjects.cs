@@ -241,7 +241,7 @@ namespace Vaperoom.Models
                     },
                      new Product
                      {
-                         Category = Category["Мехмоды"],
+                         Category = Category["Девайсы"],
                          ProductType = TypeProduct.Мехмоды,
                          Img = "https://imageup.ru/img227/3748549/2170mekh1.jpg",
                          Name = "Мехмод Rockvape - Rebel 21700 Purple Cyber Set",
@@ -286,7 +286,7 @@ namespace Vaperoom.Models
                      },
                      new Product
                      {
-                         Category = Category["Мехмоды"],
+                         Category = Category["Девайсы"],
                          ProductType = TypeProduct.Мехмоды,
                          Img = "https://imageup.ru/img110/3748563/21m1.jpg",
                          Name = "Мехмод Rockvape - Swordfish 21700 Black Cerakote Set",
@@ -324,7 +324,7 @@ namespace Vaperoom.Models
                      },
                      new Product
                      {
-                         Category = Category["Мехмоды"],
+                         Category = Category["Девайсы"],
                          ProductType = TypeProduct.Мехмоды,
                          Img = "https://imageup.ru/img219/3748556/mekhg1.jpg",
                          Name = "Мехмод GodMod - Imperium Gloss Black - Gold",

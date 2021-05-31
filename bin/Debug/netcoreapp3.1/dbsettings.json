@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
 
-    "DefaultConnection": "Server=DESKTOP-602DUH2;Database=Vaperoom1;Trusted_Connection=True; MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=DESKTOP-IFVH175;Database=VapeRoom1;Trusted_Connection=True; MultipleActiveResultSets=true"
   }
 }

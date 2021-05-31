@@ -96,7 +96,6 @@ C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.Views.pdb
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Products\Product.cshtml.g.cs
-C:\Users\navfa\source\repos\Vaperoom\bin\Debug\netcoreapp3.1\Vaperoom.StaticWebAssets.xml
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.csprojAssemblyReference.cache
