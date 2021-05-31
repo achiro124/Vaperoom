@@ -31,7 +31,24 @@ namespace Vaperoom.Manager.Products
         }
 
         public async Task<Product> GetProductById(int ProductId) => await _context.Products.Include(st => st.Category).FirstOrDefaultAsync(st => st.ProductID == ProductId);
-        
-        
+
+        public List<Product> GetByType(List<Product> products, int Type) => products.Where(st => (int)st.ProductType == Type).ToList();
+
+        public List<Product> Sorting(List<Product> products, string Type)
+        {
+            if (Type == "ValueOne")
+            {
+                products = products.OrderBy(st => st.Value).ToList();
+            }
+            if (Type == "Second")
+            {
+                products = products.OrderByDescending(st => st.Value).ToList();
+            }
+            if (Type == "Raiting")
+            {
+                products = products.OrderByDescending(st => st.Score).ToList();
+            }
+            return products;
+        }
     }
 } 

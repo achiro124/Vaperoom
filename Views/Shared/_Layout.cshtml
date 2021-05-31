@@ -13,7 +13,7 @@
     <div class="header">
         <div class="wrapper">
             <div class="logo">
-                <a href="index.html" class="ref-block">
+                <a href=@Url.Action("Index","Home") class="ref-block">
                     <img src="~/img/VapeShopLogo.png" alt="" class="logo-image">
                 </a>
             </div>
@@ -23,100 +23,45 @@
                         <a class="ref-block" href="#">Каталог</a>
                         <ul class="ul-none-block">
                             <div class="right-column">
-                                <li>
-                                    <a class="ref-block name-category" href="#">НОВИНКИ</a>
-                                </li>
                                  <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие"})>POD-системы и комплектующие</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Девайсы</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие",Type = 0})>GeekVape</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Жидкости</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие",Type = 1})>SMOK</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Разное</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие",Type = 2})>Logic_Compact</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block name-category" href="#">ТОП-ЦЕНЫ</a>
-                                </li>
-
-                                <li>
-                                    <a class="ref-block name-category" href="#">ЖИДКОСТИ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ДЕВАЙСЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">АКСЕСУАРЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие", Type = -1})>ТОП-ЦЕНЫ</a>
                                 </li>
                             </div>
                             <div class="right-column">
                                 <li>
-                                    <a class="ref-block name-category" href="#">НОВИНКИ</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "Жидкости"})>Жидкости</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости", Type = 3})>Солевые_жидкости</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Девайсы</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Жидкости</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Разное</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ТОП-ЦЕНЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ЖИДКОСТИ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ДЕВАЙСЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">АКСЕСУАРЫ</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Жидкости", Type = 4})>Щелочные_жидкости</a>
                                 </li>
                             </div>
                             <div class="right-column">
                                 <li>
-                                    <a class="ref-block name-category" href="#">НОВИНКИ</a>
+                                    <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "Девайсы"})>Девайсы</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Атомайзеры</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Девайсы", Type = 5})>Мехмоды</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Девайсы</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Девайсы", Type = 6})>Аккамуляторы</a>
                                 </li>
                                 <li>
-                                    <a class="ref-block sub-category" href="#">Жидкости</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block sub-category" href="#">Разное</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ТОП-ЦЕНЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ЖИДКОСТИ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">ДЕВАЙСЫ</a>
-                                </li>
-                                <li>
-                                    <a class="ref-block name-category" href="#">АКСЕСУАРЫ</a>
+                                    <a class="ref-block sub-category" href=@Url.Action("Category","Products", new {Category = "Девайсы", Type = 7})>Готовые_койлы</a>
                                 </li>
                             </div>
                             <div class="clearfix"></div>
@@ -155,17 +100,7 @@
                     menu
                 </div>
                 <ul>
-                    <li><a href="index.html">Покупка билетов</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li class="li_hober">
-                        <a href="#">Новости</a>
-                        <ul>
-                            <li><a href="#">ewwfewfewfwe</a></li>
-                            <li><a href="#">ewwfewfewfwe</a></li>
-                            <li><a href="#">ewwfewfewfwe</a></li>
-                            <li><a href="#">ewwfewfewfwe</a></li>
-                        </ul>
-                    </li>
+                    <li><a href=@Url.Action("Index","Home")>Главная</a></li>
                     <li><a href=@Url.Action("Register","Account")>Личный кабинет</a></li>
 
                     <li><a href="search_hotels.html">Отели</a></li>

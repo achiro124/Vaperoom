@@ -21,9 +21,17 @@ namespace Vaperoom.Controllers
             return View(product);
         }
 
-        public async Task<IActionResult> Category(string Category)
+        public async Task<IActionResult> Category(string Category, int Type)
         {
             var Products = await _product.GetByCategory(Category);
+            if(Type != -1)
+            {
+                Products = _product.GetByType(Products,Type);
+            }
+            else
+            {
+                Products = _product.Sorting(Products, "ValueOne");
+            }
             return View(Products);  
         }
         
