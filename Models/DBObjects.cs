@@ -241,7 +241,7 @@ namespace Vaperoom.Models
                     },
                     new Product
                     {
-                        Category = Category["Аккамуляторы"],
+                        Category = Category["Девайсы"],
                         ProductType = TypeProduct.Аккамуляторы,
                         Img = "https://imageup.ru/img106/3748689/vtc6.jpg",
                         Name = "Sony / Murata VTC6 - 3000mAh, 30A, 3.6V",
@@ -269,7 +269,7 @@ namespace Vaperoom.Models
                     },
                     new Product
                     {
-                        Category = Category["Аккамуляторы"],
+                        Category = Category["Девайсы"],
                         ProductType = TypeProduct.Аккамуляторы,
                         Img = "https://imageup.ru/img149/3748690/5a1.jpg",
                         Name = "Sony / Murata VTC5A",
@@ -297,7 +297,7 @@ namespace Vaperoom.Models
                     },
                     new Product
                     {
-                        Category = Category["Аккамуляторы"],
+                        Category = Category["Девайсы"],
                         ProductType = TypeProduct.Аккамуляторы,
                         Img = "https://imageup.ru/img289/3748691/40t1.jpg",
                         Name = "Samsung 40T - 4000mAh, 30A, 3.7V",
@@ -323,7 +323,7 @@ namespace Vaperoom.Models
                     },
                     new Product
                     {
-                        Category = Category["Готовые койлы"],
+                        Category = Category["Девайсы"],
                         ProductType = TypeProduct.Готовые_койлы,
                         Img = "https://imageup.ru/img156/3748692/k1.jpg",
                         Name = "Framed Alien - 0.07 Ω (ручная намотка)",
@@ -608,9 +608,7 @@ namespace Vaperoom.Models
                     {
                         new Category { Category_Name = "POD-системы и комплектующие" },
                         new Category { Category_Name = "Жидкости для POD и MTL" },
-                        new Category { Category_Name = "Девайсы" },
-                        new Category { Category_Name = "Аккамуляторы" },
-                        new Category { Category_Name = "Готовые койлы" }
+                        new Category { Category_Name = "Девайсы" }
 
                     };
                     category = new Dictionary<string, Category>();

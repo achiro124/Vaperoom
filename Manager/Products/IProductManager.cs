@@ -11,5 +11,8 @@ namespace Vaperoom.Manager.Products
         Task<ICollection<Product>> GetAllProductsAsync();
         Task<Product> GetProductById(int ProductId);
         Task<List<Product>> GetByCategory(string Category);
+        List<Product> GetByType(List<Product> products,int Type);
+        List<Product> Sorting(List<Product> products, string Type);
+        string GetNameTypeProduct(int Type);
     }
 }
