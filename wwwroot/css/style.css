@@ -876,7 +876,7 @@ a {
 	height: 80px;
 	background-color: black;
 }
-.image-footer ../img {
+.image-footer img {
 	margin: auto;
   transition: 0.3s ease;
   border-radius: 0;
@@ -1123,6 +1123,7 @@ a {
 
 .sim-slider-element {
   width: 100%;
+  height: 100%;
   transition: opacity 1s ease-in;
   opacity: 0;
   position: absolute;
@@ -1131,7 +1132,16 @@ a {
   top: 0;
   display: block;
 }
-
+.sim-slider-element img {
+	margin: auto;
+  transition: 0.3s ease;
+  border-radius: 0;
+  top: -50px;
+   width: 100%; height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center;
+}
 /* Navigation item styles */
 div.sim-slider-arrow-left,
 div.sim-slider-arrow-right {
