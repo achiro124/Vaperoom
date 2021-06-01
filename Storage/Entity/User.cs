@@ -17,17 +17,10 @@ namespace Vaperoom.Storage.Entity
         public string Email { get; set; }
         public string Password { get; set; }
         public byte[] Image { get; set; }
-        [Range(0, 1)]
-        public Role Role { get; set; }
         public long Phone_number { get; set; }
-        public DateTime DateOfBirthday { get; set; }
+        public DateTime? DateOfBirthday { get; set; }
+        public int BasketId { get; set; }
+        public Basket Basket { get; set; }
 
-
-    }
-
-    public enum Role
-    {
-        Admin = 1,
-        User = 0
     }
 }

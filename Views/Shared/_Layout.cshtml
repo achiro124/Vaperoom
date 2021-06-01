@@ -23,7 +23,7 @@
                         <a class="ref-block" href="#">Каталог</a>
                         <ul class="ul-none-block">
                             <div class="right-column">
-                                 <li>
+                                <li>
                                     <a class="ref-block name-category" href=@Url.Action("Category","Products", new {Category = "POD-системы и комплектующие"})>POD-системы и комплектующие</a>
                                 </li>
                                 <li>
@@ -71,9 +71,10 @@
             </div>
 
             <div class="search">
-                <form action="">
-                    <input type="text" name="search" class="input-search" placeholder="Поиск товара...">
-                    <input type="submit" value="" class="button-search">
+                <form class="searchfo" method="get" asp-controller="Products" asp-action="Search" style="width:250px !important;">
+                    @*Блок поиска по сайту*@
+                    <input class="searchin" type="search" placeholder="Search title..." value="@ViewData["Getemployeedetails"]" name="Name">       @*Блок поиска по сайту*@
+                    <button type="submit" value="Search" class="searchbu" /> @*Блок поиска по сайту*@
                 </form>
             </div>
 
@@ -86,7 +87,7 @@
                 </div>
             </div>
             <div class="basket">
-                <a href="#" class="ref-block ref-basket">
+                <a href=@Url.Action("Profile","Users") class="ref-block ref-basket">
                     <div class="counter">0</div>
                 </a>
 
@@ -101,7 +102,7 @@
                 </div>
                 <ul>
                     <li><a href=@Url.Action("Index","Home")>Главная</a></li>
-                    <li><a href=@Url.Action("Register","Account")>Личный кабинет</a></li>
+                    <li><a href=@Url.Action("Profile","Users")>Личный кабинет</a></li>
                 </ul>
             </div>
         </div>

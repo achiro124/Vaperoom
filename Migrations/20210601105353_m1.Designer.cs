@@ -10,7 +10,7 @@ using Vaperoom.Storage;
 namespace Vaperoom.Migrations
 {
     [DbContext(typeof(MvcVapeShopContext))]
-    [Migration("20210529180125_m1")]
+    [Migration("20210601105353_m1")]
     partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,12 +65,7 @@ namespace Vaperoom.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("BasketId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Baskets");
                 });
@@ -171,7 +166,10 @@ namespace Vaperoom.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DateOfBirthday")
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DateOfBirthday")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
@@ -189,10 +187,9 @@ namespace Vaperoom.Migrations
                     b.Property<long>("Phone_number")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
                     b.HasKey("UserId");
+
+                    b.HasIndex("BasketId");
 
                     b.ToTable("Users");
                 });
@@ -210,17 +207,6 @@ namespace Vaperoom.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Vaperoom.Storage.Entity.Basket", b =>
-                {
-                    b.HasOne("Vaperoom.Storage.Entity.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("User");
                 });
@@ -249,9 +235,22 @@ namespace Vaperoom.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Vaperoom.Storage.Entity.User", b =>
+                {
+                    b.HasOne("Vaperoom.Storage.Entity.Basket", "Basket")
+                        .WithMany("Users")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+                });
+
             modelBuilder.Entity("Vaperoom.Storage.Entity.Basket", b =>
                 {
                     b.Navigation("Products");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("Vaperoom.Storage.Entity.Category", b =>

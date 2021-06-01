@@ -200,3 +200,6 @@ C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.Views.p
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.csproj.CopyComplete
 C:\Users\Иван\Source\Repos\Vaperoom\obj\Debug\netcoreapp3.1\Vaperoom.genruntimeconfig.cache
 C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Products\Category.cshtml.g.cs
+C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Products\Search.cshtml.g.cs
+C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\navfa\source\repos\Vaperoom\obj\Debug\netcoreapp3.1\Razor\Views\Users\Profile.cshtml.g.cs

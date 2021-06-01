@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,6 +10,7 @@ using System;
 using Vaperoom.Manager;
 using Vaperoom.Manager.Accounts;
 using Vaperoom.Manager.Products;
+using Vaperoom.Manager.Users;
 using Vaperoom.Models;
 using Vaperoom.Storage;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
@@ -33,6 +35,7 @@ namespace Vaperoom
             services.AddDbContext<MvcVapeShopContext>(options => options.UseSqlServer(_confstring.GetConnectionString("DefaultConnection")));
             services.AddTransient<IProductManager, ProductManager>();
             services.AddTransient<IAccountManager, AccountManager>();
+            services.AddTransient<IUserManager, UserManager>();
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options => //CookieAuthenticationOptions

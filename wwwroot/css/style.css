@@ -80,7 +80,7 @@ a {
 	width: 15px;
 	height: 15px;
 	float: right;
-	background-image: url(img/list-down.png);
+	background-image: url(../../img/list-down.png);
 	background-size: 15px 15px;
 	background-position: center center;
 	position: relative;
@@ -157,7 +157,7 @@ a {
 	padding: 13px;
 	border: 1px solid black;
 	transition: 0.4s;
-	background-image: url(img/glass-white.png);
+	background-image: url(../img/glass-white.png);
 	background-position: center;
 	background-size: 20px 20px;
 	background-repeat: no-repeat;
@@ -165,7 +165,7 @@ a {
 }
 .button-search:hover {
 	background-color: #fff;
-	background-image: url(img/glass.png);
+	background-image: url(../img/glass.png);
 	color: black;
 	transition: 0.4s;
 }
@@ -187,17 +187,17 @@ a {
 	width: 15px;
 	height: 15px;
 	float: left;
-	background-image: url(img/inst.png);
+	background-image: url(../img/inst.png);
 	background-size: 15px 15px;
 	background-position: center center;
 	margin-right:  10px;
 	background-repeat: no-repeat;
 }
 .ref-icons-2 {
-	background-image: url(img/vk.png);
+	background-image: url(../img/vk.png);
 }
 .ref-icons-3 {
-	background-image: url(img/facebook.png);
+	background-image: url(../img/facebook.png);
 	background-size: 20px 15px;
 }
 .social-icons {
@@ -216,7 +216,7 @@ a {
 	height: 43px;
 	border: 1px solid black;
 	transition: 0.4s;
-	background-image: url(img/basket-white.png);
+	background-image: url(../img/basket-white.png);
 	background-repeat: no-repeat;
 	background-size: 40px 25px;
 
@@ -234,7 +234,7 @@ a {
 .ref-basket:hover {
 	background-color: #fff;
 	transition: 0.4s;
-	background-image: url(img/basket-black.png);
+	background-image: url(../img/basket-black.png);
 	transition: 0.4s;
 }
 .ref-basket:hover .counter {
@@ -370,7 +370,7 @@ a {
 	background-color: #EAEAEA;
 	margin: 10px 10px;
 }
-.newproducts  .new  .previev img {
+.newproducts  .new  .previev ../img {
 	margin: auto;
     transition: 0.3s ease;
     border-radius: 0;
@@ -419,12 +419,12 @@ a {
 	height: 47px;
 	background-color: opacity;
 	left: 225px;
-	background-image: url(img/Corner@1X.png);
+	background-image: url(../img/Corner@1X.png);
 }
 .newproducts .new:nth-child(2) .newContent
 {
 	left: 525px;
-	background-image: url(img/Corner@2X.png);
+	background-image: url(../img/Corner@2X.png);
 }
 
 .newproducts  .newContent .cont
@@ -797,27 +797,27 @@ a {
 }
 .americanar
 {
-	background-image: url(img/aex@1X.jpeg);
+	background-image: url(../img/aex@1X.jpeg);
 }
 .mastercard
 {
-	background-image: url(img/mastercard@1X.jpeg);
+	background-image: url(../img/mastercard@1X.jpeg);
 }
 .maestro
 {
-	background-image: url(img/maestero@1X.jpeg);
+	background-image: url(../img/maestero@1X.jpeg);
 }
 .paypal
 {
-	background-image: url(img/paypal@1X.jpeg);
+	background-image: url(../img/paypal@1X.jpeg);
 }
 .discover
 {
-	background-image: url(img/discover@1X.jpeg);
+	background-image: url(../img/discover@1X.jpeg);
 }
 .visa_jpg
 {
-	background-image: url(img/visa_straight@1X.jpeg);
+	background-image: url(../img/visa_straight@1X.jpeg);
 }
 
 .aboutfooter 
@@ -876,7 +876,7 @@ a {
 	height: 80px;
 	background-color: black;
 }
-.image-footer img {
+.image-footer ../img {
 	margin: auto;
   transition: 0.3s ease;
   border-radius: 0;
@@ -928,7 +928,7 @@ a {
 	margin-bottom: 15px;
 	left: 830px;
 	top: 15px;
-	background-image: url(img/right-arrow.png);
+	background-image: url(../img/right-arrow.png);
 	background-color: black;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -937,7 +937,7 @@ a {
 }
 .btn-prev {
 	top: 90px;
-	background-image: url(img/left-arrow.png);
+	background-image: url(../img/left-arrow.png);
 }
 .btn-next:hover {
 	background-position: 8px center;
@@ -980,8 +980,8 @@ a {
 	margin-right: 10px;
 }
 
-.my-account .photo img,
-.basket-account .photo img{
+.my-account .photo ../img,
+.basket-account .photo ../img{
 	margin: auto;
   transition: 0.3s ease;
   border-radius: 0;
@@ -1147,7 +1147,7 @@ div.sim-slider-arrow-left {
   left: 10px;
   top: 45%;
   display: block;
-  background: url("img/slider - left.png") no-repeat;
+  background: url("../img/slider - left.png") no-repeat;
   background-size: 60px 60px;
   transition: 0.1s;
 }
@@ -1156,7 +1156,7 @@ div.sim-slider-arrow-right {
   right: 10px;
   top: 45%;
   display: block;
-  background: url("img/slider - right.png") no-repeat;
+  background: url("../img/slider - right.png") no-repeat;
   background-size: 60px 60px;
   transition: 0.1s;
 }

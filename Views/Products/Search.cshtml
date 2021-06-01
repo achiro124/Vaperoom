@@ -1,0 +1,30 @@
+﻿@model List<Vaperoom.Storage.Entity.Product>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вейп Шоп | Vape shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="padding-bottom:3px; left:100%;">Вот, что нашлось по результатам поиска :</h1>
+    <h1 style="padding-bottom:3px; left:100%;">"@ViewData["Getemployeedetails"]"</h1>
+    <div class="newproducts">
+
+        @foreach (var Product in Model)
+        {
+
+            <a href=@Url.Action("Product","Products",new { ProductId = Product.ProductID}) style="display: block;">
+                <div class="new">
+                    <div class="previev">
+                        <img src=@Product.Img alt="" width="250" height="235">
+                    </div>
+                    <p class="nameprod">@Product.Name</p>
+                    <p class="price">@Product.Value ₽</p>
+                </div>
+            </a>
+        }
+    </div>
+</body>
+</html>
