@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Vaperoom.Manager.Accounts;
+using Vaperoom.Manager.Products;
 using Vaperoom.Storage.Entity;
 
 namespace Vaperoom.Controllers
@@ -13,13 +14,16 @@ namespace Vaperoom.Controllers
     public class AccountController : Controller
     {
         private IAccountManager db;
-        public AccountController(IAccountManager accountManager)
+        private IProductManager _product;
+        public AccountController(IAccountManager accountManager, IProductManager productManager)
         {
             db = accountManager;
+            _product = productManager;
         }
         [HttpGet]
         public IActionResult Login()
         {
+            ViewBag.CoutBasket = _product.GetCoutBasket(User.Identity.Name);
             return View();
         }
 
@@ -27,6 +31,7 @@ namespace Vaperoom.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel model)
         {
+            ViewBag.CoutBasket = _product.GetCoutBasket(User.Identity.Name);
             if (ModelState.IsValid)
             {
                 var user = await db.GetUser(model);
@@ -44,6 +49,7 @@ namespace Vaperoom.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            ViewBag.CoutBasket = _product.GetCoutBasket(User.Identity.Name);
             return View();
         }
 
@@ -51,6 +57,7 @@ namespace Vaperoom.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterModel model)
         {
+            ViewBag.CoutBasket = _product.GetCoutBasket(User.Identity.Name);
             if (ModelState.IsValid)
             {
                 var user = await db.GetUser1(model);

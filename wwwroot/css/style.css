@@ -876,7 +876,7 @@ a {
 	height: 80px;
 	background-color: black;
 }
-.image-footer ../img {
+.image-footer img {
 	margin: auto;
   transition: 0.3s ease;
   border-radius: 0;
@@ -980,8 +980,8 @@ a {
 	margin-right: 10px;
 }
 
-.my-account .photo ../img,
-.basket-account .photo ../img{
+.my-account .photo img,
+.basket-account .photo img{
 	margin: auto;
   transition: 0.3s ease;
   border-radius: 0;
@@ -1123,6 +1123,7 @@ a {
 
 .sim-slider-element {
   width: 100%;
+  height: 100%;
   transition: opacity 1s ease-in;
   opacity: 0;
   position: absolute;
@@ -1130,6 +1131,18 @@ a {
   left: 0;
   top: 0;
   display: block;
+}
+
+.sim-slider-element img {
+	margin: auto;
+	transition: 0.3s ease;
+	border-radius: 0;
+	top: -50px;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	object-position: center;
 }
 
 /* Navigation item styles */
@@ -1195,3 +1208,71 @@ span.sim-dot {
 
 /*КОНЕЦ СЛАЙДЕРА*/
 
+.textarea {
+	width: 500px;
+	padding: 20px 10px 10px 10px;
+	resize: none;
+}
+
+.submit-btn-textarea {
+	margin-top: 0;
+	width: 250px;
+	padding: 22px 20px 22px 20px;
+}
+
+.form {
+	margin-top: 20px;
+}
+
+.product-title-inputs {
+	float: left;
+	display: block;
+	width: 150px;
+}
+
+.inputs {
+	float: left;
+	margin-left: 100px;
+}
+
+	.inputs input {
+		border: 1px solid black;
+		display: block;
+		background-color: black;
+		color: white;
+		outline: none;
+		float: left;
+		margin-right: 5px;
+		padding: 5px 10px;
+		transition: .4s;
+	}
+
+		.inputs input:hover {
+			background-color: #fff;
+			color: black;
+			transition: .4s;
+		}
+.name-product-float-no {
+	float: none;
+}
+
+.name-product {
+	margin-top: 10px;
+	width: 300px;
+	float: left;
+}
+
+.comment {
+	margin-top: 20px;
+	width: 600px;
+	min-height: 20px;
+	float: left;
+}
+
+.edit-btn {
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-top: -25px;
+}

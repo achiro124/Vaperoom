@@ -7,68 +7,218 @@
     <title>Вейп Шоп | Vape shop</title>
     <link rel="stylesheet" href="~/css/style.css">
 </head>
-    <body>
-            <div class="newproducts newproducts-product">
-                <div class="product-title">@Model.Name</div>
-                <div class="product-image">
-                    <img src=@Model.Img alt="" class="image-prod">
-                </div>
-                <div class="rating rating-2 rating_set">
+<body>
+    <div class="newproducts newproducts-product">
+        <div class="product-title">@Model.Name</div>
 
-                    <div class="rating_body">
-                        <div class="rating_active"></div>
-                        <div class="rating_items">
-                            <input type="radio" class="rating_item" value="1" name="rating">
-                            <input type="radio" class="rating_item" value="2" name="rating">
-                            <input type="radio" class="rating_item" value="3" name="rating">
-                            <input type="radio" class="rating_item" value="4" name="rating">
-                            <input type="radio" class="rating_item" value="5" name="rating">
+        <!--image slider start-->
+        <div class="sim-slider">
+            <ul class="sim-slider-list">
+                <li><img src="~/img/white.jpg" alt="screen" width="720"></li>
+
+                <!--Загружать фото 1280*720-->
+                <li class="sim-slider-element"><img src=@Model.Img alt="1"></li>
+                @foreach (var img in Model.Imgs)
+                {
+                    <li class="sim-slider-element"><img src=@img.ImagesUrl alt="2"></li>
+                }
+            </ul>
+            <div class="sim-slider-arrow-left"></div>
+            <div class="sim-slider-arrow-right"></div>
+            <div class="sim-slider-dots"></div>
+        </div>
+        <!--image slider end-->
+        <script src="~/Js/script.js"></script>
+        <script>new Sim()</script>
+        <script src="~/Js/script2.js"></script>
+
+
+        <div class="rating rating-2 rating_set">
+
+            <div class="rating_body">
+                <div class="rating_active"></div>
+                <div class="rating_items">
+                    <input type="radio" class="rating_item" value="1" name="rating">
+                    <input type="radio" class="rating_item" value="2" name="rating">
+                    <input type="radio" class="rating_item" value="3" name="rating">
+                    <input type="radio" class="rating_item" value="4" name="rating">
+                    <input type="radio" class="rating_item" value="5" name="rating">
+                </div>
+            </div>
+            <div class="rating_value rating_value-hidden">3.6</div>
+            <div style="font-size: 14px; width: 100px; margin-left: 10px; margin-bottom: 4px;">2417 отзывов</div>
+        </div>
+
+
+        <p class="pricelist">@Model.Value ₽</p>
+        <br>
+        <p>Доступность: <strong style="padding-left: 30px;" class="before-block">в наличие</strong></p>
+
+        <div class="warning">
+            <p>ВНИМАНИЕ: КУРЕНИЕ И УПОТРЕБЛЕНИЕ НИКОТИНОСОДЕРЖАЩЕЙ ПРОДУКЦИИ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ, МОЖЕТ ВЫЗЫВАТЬ ЗАВИСИМОСТЬ.</p>
+        </div>
+        <div class="warning description-product">
+            <p>@Model.Description</p>
+            <p>@Model.Characteristics</p>
+        </div>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="count-product">
+                <div class="left-column-count" id="minus">-</div>
+                <div class="center-column-count">1</div>
+                <div class="right-column-count" id="plus">+</div>
+            </div>
+            <input type="hidden" id="hidden" name="hidden">
+
+            <script>
+                var count = 1;
+
+                document.querySelector('.left-column-count').onclick = function () {
+                    count--;
+                    if (count <= 1) {
+                        count = 1;
+                    }
+                    document.querySelector('.center-column-count').innerHTML = count;
+                    document.getElementById('hidden').value = count;
+                };
+                document.querySelector('.right-column-count').onclick = function () {
+                    count++;
+                    document.querySelector('.center-column-count').innerHTML = count;
+                    document.getElementById('hidden').value = count;
+                };
+            </script>
+
+            <input type="submit" value="В КОРЗИНУ" class="submit-btn" formaction=@Url.Action("AddInBasket","Users", new { ProductId = Model.ProductID})>
+        </form>
+
+        <div class="clearfix"></div>
+
+        @if (ViewBag.User != null && ViewBag.Review != true)
+        {
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="form">
+                    <textarea name="text" id="" placeholder="Введите ваш отзыв" class="textarea"></textarea>
+                    <input type="submit" value="ГОТОВО" class="submit-btn submit-btn-textarea" formaction=@Url.Action("AddReviews", "Products", new { ProductId = Model.ProductID })>
+                </div>
+            </form>
+        }
+
+        @if (ViewBag.User == null)
+        {
+            <p><span style="font-weight:bold">Чтобы оставить отзыв, необходимо войти в аккаунт</span></p>
+        }
+
+
+
+        @if (Model.Reviews != null)
+        {
+            @foreach (var Rev in Model.Reviews)
+            {
+                if (Rev.UsersId != ViewBag.UserId)
+                {
+                    if (Rev.ImgUser != null)
+                    {
+                        <div class="basket-account">
+                            <div class="photo photo-basket">
+                                <img src="data:image/jpeg;base64, @(Convert.ToBase64String(Rev.ImgUser))" alt="" class="photo-account">
+                            </div>
+                            <div class="name-product name-product-float-no">
+                                <p>@Rev.Nickname</p>
+                                <p class="gray" style="float: right;margin-top: -20px; margin-right: 20px;">Дата: @Rev.DateOfReview</p>
+                            </div>
+                            <div class="comment">
+                                <p>@Rev.Description</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="basket-account">
+                            <div class="photo photo-basket">
+                                <img src="/img/bmpeIr16d8o.jpg" alt="" class="photo-account">
+                            </div>
+                            <div class="name-product name-product-float-no">
+                                <p>@Rev.Nickname</p>
+                                <p class="gray" style="float: right;margin-top: -20px; margin-right: 20px;">Дата: @Rev.DateOfReview</p>
+                            </div>
+                            <div class="comment">
+                                <p>@Rev.Description</p>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    }
+                }
+                if (Rev.UsersId == ViewBag.UserId)
+                {
+                    if (Rev.ImgUser != null)
+                    {
+                        <div class="basket-account">
+                            <div class="photo photo-basket">
+                                <img src="data:image/jpeg;base64, @(Convert.ToBase64String(Rev.ImgUser))" alt="" class="photo-account">
+                            </div>
+                            <div class="name-product name-product-float-no">
+                                <p>@Rev.Nickname</p>
+                                <p class="gray" style="float: right;margin-top: -20px; margin-right: 20px;">Дата: @Rev.DateOfReview</p>
+                            </div>
+                            <div class="comment">
+                                <p>@Rev.Description</p>
+                            </div>
+
+
+                            <a href="#" class="edit-btn">
+                                <img src="~/img/edit.png" alt="" width="20" height="20">
+                            </a>
+                            <a href=@Url.Action("DeleteReviews","Products",new { ProductId = Rev.ProductId, IdUser = Rev.UsersId}) class="edit-btn">
+                                <img src="~/img/X.png" alt="" width="20" height="20" style="margin-left: 25px;">
+                            </a>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="basket-account">
+                            <div class="photo photo-basket">
+                                <img src="/img/bmpeIr16d8o.jpg" alt="" class="photo-account">
+                            </div>
+                            <div class="name-product name-product-float-no">
+                                <p>@Rev.Nickname</p>
+                                <p class="gray" style="float: right;margin-top: -20px; margin-right: 20px;">Дата: @Rev.DateOfReview</p>
+                            </div>
+                            <div class="comment">
+                                <p>@Rev.Description</p>
+                            </div>
+
+
+                            <a href="#popup2" class="edit-btn" style="margin-left: -25px;">
+                                <img src="~/img/edit.png" alt="" width="20" height="20">
+                            </a>
+                            <a href=@Url.Action("DeleteReviews","Products",new { ProductId = Rev.ProductId, IdUser = Rev.UsersId}) class="edit-btn">
+                                <img src="~/img/X.png" alt="" width="20" height="20">
+                            </a>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    }
+                    <div id="popup2" class="popup">
+                        <a href="#" class="popup_area"></a>
+                        <div class="popup_body">
+                            <div class="popup_content">
+                                <a href="#" class="popup_close">X</a>
+                                <form method="post" action="" enctype="multipart/form-data">
+                                    <h2>Редактировать</h2><br>
+                                    <textarea name="text" id="" placeholder="Введите ваш текст" class="textarea" >@Rev.Description</textarea>
+                                    <input type="submit" value="Готово" formaction=@Url.Action("EditReviews", "Products", new { ProductId = Rev.ProductId }) class="submit-btn" style="text-align: center;float: left;" />
+                                </form>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="rating_value rating_value-hidden">3.6</div>
-                    <div style="font-size: 14px; width: 100px; margin-left: 10px; margin-bottom: 4px;">2417 отзывов</div>
-                </div>
+                }
+            }
+        }
+    </div>
 
-
-                <p class="pricelist">@Model.Value ₽</p>
-                <br>
-                <p>Доступность: <strong style="padding-left: 30px;" class="before-block">в наличие</strong></p>
-
-                <div class="warning">
-                    <p>ВНИМАНИЕ: КУРЕНИЕ И УПОТРЕБЛЕНИЕ НИКОТИНОСОДЕРЖАЩЕЙ ПРОДУКЦИИ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ, МОЖЕТ ВЫЗЫВАТЬ ЗАВИСИМОСТЬ.</p>
-                </div>
-                <div class="warning description-product">
-                    <p>@Model.Description</p>
-                    <p>@Model.Characteristics</p>
-                </div>
-                <form action="#">
-                    <div class="count-product">
-                        <div class="left-column-count" id="minus">-</div>
-                        <div class="center-column-count">1</div>
-                        <div class="right-column-count" id="plus">+</div>
-                    </div>
-                    <input type="hidden" id="hidden" name="hidden">
-
-                    <script>
-                        var count = 1;
-
-                        document.querySelector('.left-column-count').onclick = function () {
-                            count--;
-                            if (count <= 1) {
-                                count = 1;
-                            }
-                            document.querySelector('.center-column-count').innerHTML = count;
-                            document.getElementById('hidden').value = count;
-                        };
-                        document.querySelector('.right-column-count').onclick = function () {
-                            count++;
-                            document.querySelector('.center-column-count').innerHTML = count;
-                            document.getElementById('hidden').value = count;
-                        };
-                    </script>
-
-                    <input type="submit" value="В КОРЗИНУ" class="submit-btn" formaction =@Url.Action("AddInBasket","Users",new { ProductId = Model.ProductID})>
-                </form>
-            </div>
-    </body>
+</body>
 </html>

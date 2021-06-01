@@ -18,7 +18,7 @@ namespace Vaperoom.Storage.Entity
         public string Password { get; set; }
         public byte[] Image { get; set; }
         public long Phone_number { get; set; }
-        public DateTime? DateOfBirthday { get; set; }
+        public DateTime DateOfBirthday { get; set; }
         public int BasketId { get; set; }
         public Basket Basket { get; set; }
 

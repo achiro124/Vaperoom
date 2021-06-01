@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="header-margin"></div>
     <div class="header">
         <div class="wrapper">
             <div class="logo">
@@ -71,10 +72,10 @@
             </div>
 
             <div class="search">
-                <form class="searchfo" method="get" asp-controller="Products" asp-action="Search" style="width:250px !important;">
+                <form method="get" asp-controller="Products" asp-action="Search">
                     @*Блок поиска по сайту*@
-                    <input class="searchin" type="search" placeholder="Search title..." value="@ViewData["Getemployeedetails"]" name="Name">       @*Блок поиска по сайту*@
-                    <button type="submit" value="Search" class="searchbu" /> @*Блок поиска по сайту*@
+                    <input class="input-search" type="search" placeholder="Search title..." value="@ViewData["Getemployeedetails"]" name="Name">       @*Блок поиска по сайту*@
+                    <input type="submit" value="" class="button-search" /> @*Блок поиска по сайту*@
                 </form>
             </div>
 
@@ -88,7 +89,7 @@
             </div>
             <div class="basket">
                 <a href=@Url.Action("Profile","Users") class="ref-block ref-basket">
-                    <div class="counter">0</div>
+                    <div class="counter">@ViewBag.CoutBasket</div>
                 </a>
 
             </div>
@@ -108,7 +109,7 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top:150px;">
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -188,6 +189,8 @@
 
     <script src="~/Js/script2.js"></script>
     <script src="~/Js/script_slider3.js"></script>
+    <script src="~/Js/script.js"></script>
+    <script>new Sim()</script>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

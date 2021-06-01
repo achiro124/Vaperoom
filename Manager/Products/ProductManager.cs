@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NewKinoHub.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace Vaperoom.Manager.Products
                                  .ToListAsync();
         }
 
-        public async Task<Product> GetProductById(int ProductId) => await _context.Products.Include(st => st.Category).FirstOrDefaultAsync(st => st.ProductID == ProductId);
+        public async Task<Product> GetProductById(int ProductId) => await _context.Products.Include(st => st.Imgs).Include(st => st.Category).Include(st=>st.Reviews).FirstOrDefaultAsync(st => st.ProductID == ProductId);
 
         public List<Product> GetByType(List<Product> products, int Type) => products.Where(st => (int)st.ProductType == Type).ToList();
 
@@ -101,5 +102,80 @@ namespace Vaperoom.Manager.Products
             return product;
         }
 
+
+        [HttpPost]
+        public async Task AddReviews(int ProductId, string Email, string text)
+        {
+            var NickName = _context.Users.FirstOrDefault(st => st.Email == Email).Nickname;
+            Review review = new Review();
+            review.Description = text;
+            review.ProductId = ProductId;
+            review.UsersId = _context.Users.FirstOrDefault(st => st.Email == Email).UserId;
+            review.Nickname = NickName;
+            review.ImgUser = _context.Users.FirstOrDefault(st => st.Email == Email).Image;
+            review.DateOfReview = DateTime.Now.ToString();
+            _context.Reviews.Add(review);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteReviews(int ProductId, int IdUser)
+        {
+            var itemToRemove = await _context.Reviews
+                                             .Include(st => st.User)
+                                             .Include(st => st.Product)
+                                             .SingleOrDefaultAsync(st => st.ProductId == ProductId && st.UsersId == IdUser);
+            if (itemToRemove != null)
+            {
+                _context.Reviews.Remove(itemToRemove);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public bool UserReview(string Email, int ProductId)
+        {
+            bool p = false;
+            if (Email != null)
+            {
+                foreach (var rev in _context.Reviews.Where(st => st.ProductId == ProductId))
+                {
+                    if (rev.UsersId == _context.Users.FirstOrDefault(st => st.Email == Email).UserId)
+                    {
+                        p = true;
+                    }
+                }
+            }
+            if (p)
+            {
+                return p;
+            }
+            else
+            {
+                return p;
+            }
+        }
+
+        public int GetCoutBasket(string Email)
+        {
+            if(Email == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return _context.Users.Include(st => st.Basket).ThenInclude(st => st.Products).FirstOrDefault(st => st.Email == Email).Basket.Products.Count();
+            }
+        }
+
+        [HttpPost]
+        public async Task EditReviews(int ProductId, int IdUser, string text)
+        {
+            if (text != null)
+            {
+                _context.Reviews.FirstOrDefault(st => st.ProductId == ProductId && st.UsersId == IdUser).Description = text;
+                _context.Reviews.FirstOrDefault(st => st.ProductId == ProductId && st.UsersId == IdUser).DateOfReview = DateTime.Now.ToString();
+            }
+            await _context.SaveChangesAsync();
+        }
     }
 } 

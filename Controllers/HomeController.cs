@@ -20,6 +20,7 @@ namespace Vaperoom.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.CoutBasket = _product.GetCoutBasket(User.Identity.Name);
             var product = await _product.GetAllProductsAsync();
             return View(product);
         }

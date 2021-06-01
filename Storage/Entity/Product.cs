@@ -28,7 +28,6 @@ namespace Vaperoom.Storage.Entity
         public List<Review> Reviews { get; set; } = new List<Review>();
         public Category Category { get; set; }
         public TypeProduct ProductType { get; set; }
-
         public List<Product_Img> Imgs { get; set; }
 
     }
