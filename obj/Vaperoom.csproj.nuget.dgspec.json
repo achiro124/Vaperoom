@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U\\Source\\Repos\\Vaperoom2\\Vaperoom.csproj": {}
+    "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U\\Source\\Repos\\Vaperoom2\\Vaperoom.csproj": {
+    "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U\\Source\\Repos\\Vaperoom2\\Vaperoom.csproj",
+        "projectUniqueName": "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj",
         "projectName": "Vaperoom",
-        "projectPath": "C:\\Users\\U\\Source\\Repos\\Vaperoom2\\Vaperoom.csproj",
+        "projectPath": "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj",
         "packagesPath": "C:\\Users\\U\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U\\Source\\Repos\\Vaperoom2\\obj\\",
+        "outputPath": "C:\\Users\\U\\source\\repos\\Vaperoom2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\U\\AppData\\Roaming\\NuGet\\NuGet.Config",
