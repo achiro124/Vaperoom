@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj": {}
+    "C:\\Users\\navfa\\source\\repos\\Vaperoom\\Vaperoom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj": {
+    "C:\\Users\\navfa\\source\\repos\\Vaperoom\\Vaperoom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj",
+        "projectUniqueName": "C:\\Users\\navfa\\source\\repos\\Vaperoom\\Vaperoom.csproj",
         "projectName": "Vaperoom",
-        "projectPath": "C:\\Users\\U\\source\\repos\\Vaperoom2\\Vaperoom.csproj",
-        "packagesPath": "C:\\Users\\U\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U\\source\\repos\\Vaperoom2\\obj\\",
+        "projectPath": "C:\\Users\\navfa\\source\\repos\\Vaperoom\\Vaperoom.csproj",
+        "packagesPath": "C:\\Users\\navfa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\navfa\\source\\repos\\Vaperoom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\U\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\navfa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,6 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
