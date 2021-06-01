@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Vaperoom.Manager.Products
         {
             _context = context;
         }
-        public async Task<ICollection<Product>> GetAllProductsAsync()
+        public async Task<List<Product>> GetAllProductsAsync()
         {
             return await _context.Products
                                  .Include(st=>st.Category)
@@ -88,6 +89,17 @@ namespace Vaperoom.Manager.Products
             }
             return "1";
         }
-        
+
+        [HttpGet]
+        public async Task<List<Product>> Search(string Name)
+        {
+            var product = await GetAllProductsAsync();
+            if (!String.IsNullOrEmpty(Name) && Name != "")
+            {
+                product = product.Where(x => x.Name.Contains(Name)).ToList();
+            }
+            return product;
+        }
+
     }
 } 

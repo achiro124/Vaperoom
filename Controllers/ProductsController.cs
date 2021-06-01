@@ -37,6 +37,14 @@ namespace Vaperoom.Controllers
             }
             return View(Products);  
         }
-        
+
+        public async Task<IActionResult> Search(string Name)
+        {
+            ViewData["Getemployeedetails"] = Name;
+            ViewBag.User = User.Identity.Name;
+            var media = await _product.Search(Name);
+            return View(media);
+        }
+
     }
 }

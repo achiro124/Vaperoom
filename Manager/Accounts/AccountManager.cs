@@ -16,7 +16,8 @@ namespace Vaperoom.Manager
 
         public async Task AddUsers(RegisterModel model)
         {
-            db.Users.Add(new User { Nickname = model.Nickname, Email = model.Email, Password = model.Password });
+            Basket basket = new Basket();
+            db.Users.Add(new User { Nickname = model.Nickname, Email = model.Email, Password = model.Password,Basket = basket,BasketId = basket.BasketId});
             await db.SaveChangesAsync();
         }
 

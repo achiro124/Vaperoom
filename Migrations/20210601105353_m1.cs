@@ -8,6 +8,18 @@ namespace Vaperoom.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Baskets",
+                columns: table => new
+                {
+                    BasketId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Baskets", x => x.BasketId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Category",
                 columns: table => new
                 {
@@ -30,31 +42,18 @@ namespace Vaperoom.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Role = table.Column<int>(type: "int", nullable: false),
                     Phone_number = table.Column<long>(type: "bigint", nullable: false),
-                    DateOfBirthday = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateOfBirthday = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    BasketId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.UserId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Baskets",
-                columns: table => new
-                {
-                    BasketId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Baskets", x => x.BasketId);
                     table.ForeignKey(
-                        name: "FK_Baskets_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId",
+                        name: "FK_Users_Baskets_BasketId",
+                        column: x => x.BasketId,
+                        principalTable: "Baskets",
+                        principalColumn: "BasketId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -145,11 +144,6 @@ namespace Vaperoom.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Baskets_UserId",
-                table: "Baskets",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Product_Imgs_ProductId",
                 table: "Product_Imgs",
                 column: "ProductId");
@@ -173,6 +167,11 @@ namespace Vaperoom.Migrations
                 name: "IX_Reviews_UserId",
                 table: "Reviews",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_BasketId",
+                table: "Users",
+                column: "BasketId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -187,13 +186,13 @@ namespace Vaperoom.Migrations
                 name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Baskets");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Category");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Baskets");
         }
     }
 }

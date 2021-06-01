@@ -12,8 +12,9 @@ namespace Vaperoom.Storage.Entity
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BasketId { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        [NotMapped]
+        public List<int> NumProduct { get; set; } = new List<int>();
+        public List<User> Users { get; set; } = new List<User>();
         public List<Product> Products { get; set; } = new List<Product>();
 
     }

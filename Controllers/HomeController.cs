@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Vaperoom.Manager.Products;
+using Vaperoom.Storage.Entity;
 
 namespace Vaperoom.Controllers
 {
@@ -22,5 +23,6 @@ namespace Vaperoom.Controllers
             var product = await _product.GetAllProductsAsync();
             return View(product);
         }
+
     }
 }
